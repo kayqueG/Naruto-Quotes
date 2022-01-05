@@ -10,6 +10,6 @@ body{
     color: #332c36;
     padding: 0;
     margin: 0;
-    font-family: 'New Tegomin', serif;
+    font-family:'Vujahday Script', cursive;
 }
 `;

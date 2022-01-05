@@ -9,11 +9,12 @@ import { Quotes } from './components/quotes';
 function App() {
   return (
     <Content>
-      <Quotes quote={"DATTEBAYO"} speaker={"DATTEBAY"}/>
+      <Quotes quote={"DATTEBAYO"} speaker={"Naruto"}/>
       <NarutoImg src={narutoImg} alt="Naruto with a kunai"/>
     </Content>
   );
 }
+
 const Content =styled.div `
   height : 100vh;
   padding : 0 50px;
