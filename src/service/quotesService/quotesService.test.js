@@ -1,6 +1,6 @@
-import {rest} from "msw";
-import { setupServer} from "msw/node";
-import {getQuote} from "./quotesService"
+import { rest } from "msw";
+import { setupServer } from "msw/node";
+import { getQuote } from ".";
 
 const response= {test:"testing"};
 
@@ -19,4 +19,4 @@ async()=>{
     const quote = await getQuote();
 
     expect(quote).toStrictEqual(response);
-})
+});

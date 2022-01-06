@@ -1,36 +1,37 @@
 import styled from "styled-components";
-import { string,func} from "prop-types"
-import { Button } from "..";
+import { string, func } from "prop-types";
+import { Button } from "../button";
 
-export const Quotes = ({ quote, speaker,onUpdate }) => {
+export const Quotes = ({ quote, speaker, onUpdate = () => {} }) => {
   return (
-      <Wrapper>
-      <Quote>{quote}</Quote>
-      <Speaker>-{speaker}</Speaker>
-      <Button onClick={onUpdate} role="button">Quote No Jutsu</Button>
-      </Wrapper>
+    <Wrapper>
+      <Quote>"{quote}"</Quote>
+      <Speaker>- {speaker}</Speaker>
+      <Button onClick={onUpdate}>Quote No Jutsu</Button>
+    </Wrapper>
   );
 };
 
-Quotes.propTypes={
-    quote: string,
-    speaker: string,
-    onUpdate: func
-}
+Quotes.propTypes = {
+  quote: string,
+  speaker: string,
+  onUpdate: func,
+};
 
 const Wrapper = styled.div`
-    flex:1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 const Quote = styled.p`
-font-sized: 2em;
-margin : 0;
+  font-sized: 2em;
+  margin: 0;
 `;
 
 const Speaker = styled(Quote)`
-    text-align: right;
-    margin-bottom: 50px;
+  text-align: right;
+  margin-bottom: 50px;
+  width: 100%;
 `;
